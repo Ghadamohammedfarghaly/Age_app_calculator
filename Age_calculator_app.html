@@ -1,0 +1,325 @@
+               <!--بسم الله الرحمن الرحيم-->
+               <!--Age_calculator_app-->
+<html>
+<head>
+<title>Age_App_Calculator</title>                 
+                                              <!--Css Styles-->
+<style>                                          
+body{
+    background-color:#D9D9D9;
+}
+#p1{
+    color:#9B56F2;
+    position:absolute;
+    top:20px;
+    left:550px;
+    font-style: italic;
+    font-size:30;
+}
+#div1{
+    position:absolute;
+    top:100px;
+    left:450px;
+    height:300px;
+    width:450px;
+    background-color:white;
+    border-radius: 15px 15px 110px 15px;
+}
+#input1{
+    overflow: hidden;
+    height:50px;
+    width:85px;
+    position:absolute;
+    top:50px;
+    left:30px;
+    border:2px solid #D9D9D9;
+    border-radius:8px;
+    padding-left:15px;
+    font-size:20px;
+    font-weight:bold;
+}
+#input2{
+    overflow: hidden;
+    height:50px;
+    width:85px;
+    position:absolute;
+    top:50px;
+    left:130px;
+    border:2px solid #D9D9D9;
+    border-radius:8px;
+    padding-left:15px;
+    font-size:20px;
+    font-weight:bold;
+}
+#input3{
+    overflow: hidden;
+    height:50px;
+    width:85px;
+    position:absolute;
+    top:50px;
+    left:230px;
+    border:2px solid #D9D9D9;
+    border-radius:8px;
+    padding-left:15px;
+    font-size:20px;
+    font-weight:bold;
+}
+hr{
+    position:absolute;
+    top:120px;
+    left:30px;
+    height:2px;
+    width:350px;
+    background-color:#D9D9D9 ;
+    border:0px;
+}
+#font1{
+    position:absolute;
+    top:25px;
+    left:30px;
+    height:20px;
+    width:40px;
+    font-family: 'Arial';
+}
+#font2{
+    position:absolute;
+    top:25px;
+    left:130px;
+    height:20px;
+    width:40px;
+    font-family: 'Arial';
+}
+#font3{
+    position:absolute;
+    top:25px;
+    left:230px;
+    height:20px;
+    width:40px;
+    font-family: 'Arial';
+}
+#font4{
+    position:absolute;
+    top:150px;
+    left:90px;
+    height:20px;
+    width:40px;
+    font-family: 'arial';
+    font-weight: bold;
+    font-size: 35px;
+    font-style: italic;
+}
+#font5{
+    position:absolute;
+    top:190px;
+    left:90px;
+    height:20px;
+    width:40px;
+    font-family: 'arial';
+    font-weight: bold;
+    font-size: 35px;
+    font-style: italic;
+}
+#font6{
+    position:absolute;
+    top:230px;
+    left:90px;
+    height:20px;
+    width:40px;
+    font-family: 'arial';
+    font-weight: bold;
+    font-size: 35px;
+    font-style: italic;
+}
+#font0{
+    position:absolute;
+    top:155px;
+    left:30px;
+    height:20px;
+    width:40px;
+    font-family:impact;
+    font-size:30px;
+    color:#9B56F2;
+    font-style: italic;
+}
+#font00{
+    position:absolute;
+    top:195px;
+    left:30px;
+    height:20px;
+    width:40px;
+    font-family:impact;
+    font-size:30px;
+    color:#9B56F2;
+    font-style: italic;
+}
+#font000{
+    position:absolute;
+    top:235px;
+    left:30px;
+    height:20px;
+    width:40px;
+    font-family:impact;
+    font-size:30px;
+    color:#9B56F2;
+    font-style: italic;
+}
+#img1{
+    position: absolute;
+    top:105px;
+    left:340px;
+    height:40px;
+    width:40px;
+}
+#img2{
+    position: absolute;
+    top:105px;
+    left:340px;
+    height:40px;
+    width:40px;
+    display:none;
+}
+#p0{
+    color:red;
+    position:absolute;
+    top:100;
+    left:30px;
+    font-size: 5px;
+    font-family: 'Arial';
+    display:none;              
+}
+#p00{
+    color:red;
+    position:absolute;
+    top:100;
+    left:130px;
+    font-size: 5px;
+    font-family: 'Arial';
+    display:none;
+}
+#p000{
+    color:red;
+    position:absolute;
+    top:100;
+    left:230px;
+    font-size: 5px;
+    font-family: 'Arial';
+    display:none;
+}
+</style>
+</head>
+<body>
+    <p id="p1">Welcome Our Dear</p>
+    <div id="div1">
+       <font id="font1">DAY</font>
+       <font id="font2">MONTH</font>
+       <font id="font3">YEAR</font>
+       <input id="input1" placeholder="DD" required/>
+       <input id="input2" placeholder="MM" required/>
+       <input id="input3" placeholder="YYYY"required/>
+       <hr/>
+       <font id="font4">years</font>
+       <font id="font5">months</font>
+       <font id="font6">days</font>
+       <img src="Group 4.png" id="img1" onclick="operation_Age();"/>   <!--start the codes-->
+       <img src="Group 5.png" id="img2"/>
+
+       <font id="font0">- -</font>                    <!--here we will write the result-->
+       <font id="font00">- -</font>
+       <font id="font000">- -</font>
+
+       <p id="p0">this field required</p>  <!--notes that the error will apear(display:block;)is after check if he don't enter value -->
+       <p id="p00">this field required</p>
+       <p id="p000">this field required</p>
+       
+
+    </div>
+                                                <!--js codes-->
+    <script>
+        var data_day;
+        var data_month;
+        var data_year;
+    function operation_Age(){
+        var data_day=window.input1.value;
+        var data_month=window.input2.value;
+        var data_year=window.input3.value;
+
+        var date=new Date();
+        var day=date.getDate();
+        var month=date.getMonth()+1;
+        var year=date.getFullYear();
+
+        var age_day=day-(data_day);
+        var age_month=month-(data_month);
+        var age_year=year-(data_year);
+
+        if(data_day==''){
+          window.p0.style.display='block';
+          window.font1.style.color='red';
+          window.input1.style.border='2px solid red';
+        }
+        else if(data_day<1 ||data_day>30){
+            window.p0.style.display='block';
+            window.p0.innerHTML='must be availd day' ;
+            window.font1.style.color='red';
+            window.input1.style.border='2px solid red';
+        }
+        else{
+            if(age_day<0){
+               age_day+=30;
+               age_month-=1;
+               window.font000.innerHTML=age_day;
+             }
+            else{
+               window.font000.innerHTML=age_day;
+            }
+        }  
+        
+        
+        if(data_month==''){
+          window.p00.style.display='block';
+          window.font2.style.color='red';
+          window.input2.style.border='2px solid red';
+        }
+        else if(data_month<1 ||data_month>12){
+            //the same !(data_month>=1&&data_month<=12)
+            window.p00.style.display='block';
+            window.p00.innerHTML='must be availd month' ;
+            window.font2.style.color='red';
+            window.input2.style.border='2px solid red';
+        }
+        else{
+            if(age_month<0){
+               age_month+=12;
+               age_year-=1;
+               window.font00.innerHTML=age_month;
+             }
+            else{
+               window.font00.innerHTML=age_month;
+            }
+        }  
+
+
+        if(data_year==''){
+          window.p000.style.display='block';
+          window.font3.style.color='red';
+          window.input3.style.border='2px solid red';
+        }
+        else if(data_year<1850 ||data_year>2023){
+            window.p000.style.display='block';
+            window.p000.innerHTML='must be availd year' ;
+            window.font3.style.color='red';
+            window.input3.style.border='2px solid red';
+        }
+        else{
+            if(age_year<0){
+               window.font0.innerHTML=age_year;
+             }
+            else{
+               window.font0.innerHTML=age_year;
+            }
+        }  
+    }   // you can subtart from day and month before if(day<data_day){day+=30; month-=1;}etc.......if(month<data_month){month+=12;year-=1;}
+       //document.write(age_year+"/"+age_month+"/"+age_day)
+    </script>
+</body>
+</html>
